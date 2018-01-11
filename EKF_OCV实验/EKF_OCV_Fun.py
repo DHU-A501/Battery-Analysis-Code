@@ -245,10 +245,10 @@ def EKF_new(file, update=True):
         X1[k][3] = U_b[k]                            # 实测电压 Uo
         X1[k][4] = X1[k][1] - X1[k][2]               # SOC误差
     if update:
-        X1[0:2, 0] = Cf[0:2]
+        X1[0:2, 0] = Cf[0:2]    # 估测的容量 
         X1[2:, 0] = Cf
     else:
-        X1[:, 0] = Cn_mAh
+        X1[:, 0] = Cn_mAh    # 容量
         
     plt.figure()
     plt.plot(X1[:, 1], 'r')
