@@ -27,3 +27,4 @@
 函数 `EKF_new(file, update=True)`：
 - file：函数 `get_file` 的输出值中的一个元素。
 - update：该选项控制是否更新OCV曲线，True为更新，False为不更新。
+- 输出：X:包含所有该次仿真中保存的所有变量
