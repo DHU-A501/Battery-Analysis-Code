@@ -205,14 +205,14 @@ if np.median(A[:, 4])<1:
 #A = A[A[:, 4]<=50]
 #A = A[A[:, 4]>=0]
 # 训练1
-index_delete = Train(A, N_train=1000, Path_output='')
+index_delete = Train(A, N_train=5000, Path_output='')
 P1 = Ana_Data(A, plot=True)
 
 #去偏
 A2 = np.delete(A, index_delete[0], axis=0)
 print("去除%d个偏差数据"%(len(index_delete[0])), "占比为%4.3f%%"%(100*len(index_delete[0])/len(A)))
 #训练2
-index_delete2 = Train(A2, N_train=1000, Path_output=Path_output)
+index_delete2 = Train(A2, N_train=5000, Path_output=Path_output)
 P2 = Ana_Data(A2, plot=True)
 y_p = P2[2]
 y_d = P2[3]

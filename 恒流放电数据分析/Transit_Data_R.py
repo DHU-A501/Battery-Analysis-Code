@@ -139,8 +139,8 @@ for Te in L:
         d.rename(columns={0:'t/s', 1:'U/mV', 2:'dU1/mV', 3:'dU2/mV', 4:'内阻/mOhm', 5:'截距', 6:'I/A', 7:'Q/mAh', 8:'SOC'}, inplace = True)  #更改列名
         
         if Err == 0:
-                with pd.ExcelWriter(filename) as writer:
-                    d.to_excel(writer, sheet_name = str(0))      #写入exel文件中
+            with pd.ExcelWriter(filename) as writer:
+                d.to_excel(writer, sheet_name = str(0))      #写入exel文件中
         else:
             print(Te[3], "-数据出错，请检查数据!-")
 
