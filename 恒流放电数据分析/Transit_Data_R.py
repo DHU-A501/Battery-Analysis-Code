@@ -2,11 +2,7 @@
 """
 Created on Mon Nov 20 21:47:24 2017
 
-通过实验室测试的变温的Exel文件来计算压降与内阻
-
-输出为 W2017_100 格式Exel
-
-批量处理
+通过实验室测试的Excel文件来计算压降与内阻
 
 @author: WangDian
 """

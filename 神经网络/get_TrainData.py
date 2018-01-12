@@ -2,9 +2,7 @@
 """
 Created on Mon Nov 13 11:15:05 2017
 
-提取30℃下的数据
-Q = f(Ri, T)
-s.t. SOC=100%/50%/20%
+整合电池数据
 
 @author: WangDian
 """
@@ -47,7 +45,7 @@ def get_data(Paths):
             Temp = 25
         File_name = P_File.group(1)
         
-        #对SOH进行筛选
+        # 对需要的放电数据进行筛选
         if  ('错误' not in path)    :   #and abs(Cy-Cycles)<10  and Temp==50
             files_Info.append([Btr, Cy, path, File_name, Temp])
     return files_Info

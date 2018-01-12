@@ -2,13 +2,7 @@
 """
 Created on Mon May  8 16:54:30 2017
 
-输入 W2017_100 格式Exel
-
-EKFun()输入量为 pandas读取exel并转换为numpy矩阵
-
-提取各SOH、SOC下内阻值以及总电量
-
-仅计算单个
+提取整数SOC下的数据
 
 @author: WangDian
 """
