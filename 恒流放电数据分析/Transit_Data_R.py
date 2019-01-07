@@ -25,10 +25,10 @@ def get_Path():
 # =============================================================================
 # 提取文件
 # =============================================================================
-def get_file(Path):
+def get_file(Paths):
     L0 = []              #存放所有文件的 Path
-    for i in Path:        #遍历指定文件夹下的文件, 并存放到 L 列表中
-        for root,dirs,files in os.walk(i):
+    for Path in Paths:        #遍历指定文件夹下的文件, 并存放到 L 列表中
+        for root,dirs,files in os.walk(Path):
             for filespath in files:
                 L0.append(os.path.join(root,filespath))
     L1 = []
